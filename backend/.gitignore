@@ -1,0 +1,72 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ── Secrets & Environment ─────────────────────────────────────────────────────
+# IMPORTANT: Never commit .env — it contains real API keys and DB credentials.
+.env
+.env.local
+.env.production
+.env.*.local
+
+# ── ML Models ─────────────────────────────────────────────────────────────────
+# Trained LSTM models are large binary files. They are regenerated automatically
+# the first time a stock is analysed. Do NOT commit them.
+Ai_models/
+routes/models/
+*.h5
+*.keras
+*.pkl
+*.joblib
+*.pt
+*.pth
+
+# ── RAG Knowledge Base ────────────────────────────────────────────────────────
+# kb_data/ is auto-generated at runtime after each stock analysis.
+# FAISS index files are also regenerated automatically.
+kb_data/
+faiss_index/
+*.faiss
+*.pkl
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+*.log.*
+logs/
+
+# ── Database ──────────────────────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*~
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── Scratch / Backups ─────────────────────────────────────────────────────────
+scratch/
+*.bak
+*.tmp
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Type checking config ──────────────────────────────────────────────────────
+pyrightconfig.json
